@@ -69,14 +69,6 @@ public class JdbcRewardRepositoryTests {
 		assertEquals(1, getRewardCount());
 
 		//	TODO-02: Use JdbcTemplate to query for a map of all column values
-		//	of a row in the T_REWARD table based on the confirmationNumber.
-		//  - Use "SELECT * FROM T_REWARD WHERE CONFIRMATION_NUMBER = ?" as SQL statement
-		//	- After making the changes, execute this test class to verify
-		//	  its successful execution.
-		//	  (If you are using Gradle, comment out the test exclude in
-		//    the build.gradle file.)
-		//
-
 		String sql = "SELECT * FROM T_REWARD WHERE CONFIRMATION_NUMBER = ?";
 
 		Map<String, Object> values = jdbcTemplate.queryForMap(sql, confirmation.getConfirmationNumber());
@@ -95,8 +87,6 @@ public class JdbcRewardRepositoryTests {
 
 	private int getRewardCount() throws SQLException {
 		// TODO-01: Use JdbcTemplate to query for the number of rows in the T_REWARD table
-		// - Use "SELECT count(*) FROM T_REWARD" as SQL statement
-
 		String sql = "SELECT COUNT(*) FROM T_REWARD";
 
 		Integer count = jdbcTemplate.queryForObject(sql, Integer.class);
