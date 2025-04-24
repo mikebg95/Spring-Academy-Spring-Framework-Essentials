@@ -11,7 +11,9 @@ rewards/internal/restaurant/Restaurant.class
 rewards/internal/restaurant/BenefitAvailabilityPolicy.class
 rewards/internal/account/Beneficiary.class
 config/RewardsConfig.class
+rewards/internal/account/JdbcAccountRepository$AccountResultSetExtractor.class
 rewards/RewardNetwork.class
+rewards/internal/restaurant/JdbcRestaurantRepository$RestaurantRowMapper.class
 rewards/internal/reward/RewardRepository.class
 rewards/internal/restaurant/RestaurantRepository.class
 rewards/Dining.class
