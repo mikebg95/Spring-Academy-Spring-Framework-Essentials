@@ -16,7 +16,7 @@ public class RestWsApplication {
         SpringApplication.run(RestWsApplication.class, args);
     }
 
-    // TODO-00: In this lab, you are going to exercise the following:
+    // xTODO-00: In this lab, you are going to exercise the following:
     // - Implementing controller handlers that handle HTTP POST, PUT, DELETE requests
     // - Using proper annotation for extracting data from incoming request
     // - Creating URI for a newly created item in handling HTTP POST request
