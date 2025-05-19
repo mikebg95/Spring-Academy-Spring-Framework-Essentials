@@ -1,4 +1,43 @@
 -------------------------------------------------------------------------------
 Test set: accounts.client.AccountClientTests
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 0.789 s - in accounts.client.AccountClientTests
+Tests run: 7, Failures: 5, Errors: 1, Skipped: 0, Time elapsed: 1.086 s <<< FAILURE! - in accounts.client.AccountClientTests
+createAccount_using_admin_should_return_201  Time elapsed: 0.064 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 201 CREATED
+ but was: 401 UNAUTHORIZED
+	at accounts.client.AccountClientTests.createAccount_using_admin_should_return_201(AccountClientTests.java:96)
+
+createAccount_using_user_should_return_403  Time elapsed: 0.005 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 403 FORBIDDEN
+ but was: 401 UNAUTHORIZED
+	at accounts.client.AccountClientTests.createAccount_using_user_should_return_403(AccountClientTests.java:111)
+
+listAccounts_using_valid_user_should_succeed  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 200 OK
+ but was: 401 UNAUTHORIZED
+	at accounts.client.AccountClientTests.listAccounts_using_valid_user_should_succeed(AccountClientTests.java:51)
+
+getAccount_using_valid_user_should_succeed  Time elapsed: 0.006 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 200 OK
+ but was: 401 UNAUTHORIZED
+	at accounts.client.AccountClientTests.getAccount_using_valid_user_should_succeed(AccountClientTests.java:79)
+
+listAccounts_using_valid_admin_should_succeed  Time elapsed: 0.002 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 200 OK
+ but was: 401 UNAUTHORIZED
+	at accounts.client.AccountClientTests.listAccounts_using_valid_admin_should_succeed(AccountClientTests.java:65)
+
+addAndDeleteBeneficiary_using_superadmin_should_succeed  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.net.URI.toString()" because "uri" is null
+	at accounts.client.AccountClientTests.addAndDeleteBeneficiary_using_superadmin_should_succeed(AccountClientTests.java:124)
+

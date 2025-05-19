@@ -105,7 +105,6 @@ public class AccountControllerTests {
     }
 
     @Test
-    @Disabled
     @WithMockUser(username = "superadmin", password = "superadmin")
     public void accountDetails_with_superadmin_credentials_should_return_200() throws Exception {
 
@@ -207,7 +206,6 @@ public class AccountControllerTests {
     }
 
     @Test
-    @Disabled
     @WithMockUser(roles = {"ADMIN", "SUPERADMIN"})
     public void addBeneficiary_with_ADMIN_or_SUPERADMIN_role_should_return_201() throws Exception {
 
